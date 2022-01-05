@@ -24,16 +24,15 @@ IoT Edge Hub
 ### Pre-requisites
 You will need the following applications, packages and resources.
 
-1. Git
-2. vscode
-3. Azure CLI
+1. [Git](https://git-scm.com/downloads)
+2. [vscode](https://code.visualstudio.com/download)
+3. [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 4. Azure IoT extension
+After installing Azure CLI, open a Bash terminal and run the following command.
 ```
 az extension add --name azure-iot
 ```
-5. .net core
-6. Docker CE
-7. Azure account
+5. [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 
 ## Azure Infrastructure Setup
 The [Microsoft Azure Quickstart Guide](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart?view=iotedge-2018-06) is a great step by step guide to get started. This repo contains scripts that will setup all of the Azure infrastructure necessary and execute all of the commands found in the Microsoft Azure Quickstart Guide. 
@@ -64,7 +63,7 @@ After the Azure IoT infrastructure is created and configured in your Azure subsc
 ### 1. SSH into the Azure Ubuntu VM 
 - Download the iot-edge-linux-install.sh onto your Ubuntu VM
 ```
-curl https://github.com/aaron-schnieder/azure-iot-infra-edge-setup/scripts/iot-edge-linux-install.sh > ./iot-edge-linux-install.sh
+curl https://raw.githubusercontent.com/aaron-schnieder/azure-iot-infra-edge-setup/main/scripts/infra-setup.sh > ./iot-edge-linux-install.sh
 sudo chmod +x iot-edge-linux-install.sh
 ```
 - Run iot-edge-linux-install.sh
